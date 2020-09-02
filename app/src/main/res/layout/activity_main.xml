@@ -49,15 +49,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
             <fragment
-                android:tag="second"
-                android:name="com.yalianxun.exhibition.widget.SecondFragment"
-                android:id="@+id/secondFragment"
+                android:tag="societyService"
+                android:name="com.yalianxun.exhibition.widget.SocietyServiceFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <fragment
+                android:tag="partyBuild"
+                android:name="com.yalianxun.exhibition.widget.PartyBuildingFragment"
+                android:id="@+id/party_build"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
             <fragment
-                android:tag="third"
-                android:name="com.yalianxun.exhibition.widget.ThirdFragment"
-                android:id="@+id/thirdFragment"
+                android:tag="charity"
+                android:name="com.yalianxun.exhibition.widget.CharityFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <fragment
+                android:tag="policyGuide"
+                android:name="com.yalianxun.exhibition.widget.PolicyGuideFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <fragment
+                android:tag="volunteer"
+                android:name="com.yalianxun.exhibition.widget.VolunteerFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </FrameLayout>

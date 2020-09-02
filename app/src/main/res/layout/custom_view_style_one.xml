@@ -25,11 +25,17 @@
                 android:layout_height="0dp"
                 tools:ignore="NestedWeights">
                 <View
+                    android:id="@+id/society"
                     android:layout_margin="2dp"
+                    android:focusable="true"
                     android:background="@drawable/yellow_bolder"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     tools:ignore="NestedWeights" />
+                <TextView
+                    android:text="@string/picture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
             </com.yalianxun.exhibition.widget.ScaleLayout>
             <LinearLayout
                 android:layout_marginTop="10dp"
@@ -81,6 +87,10 @@
                 android:src="@drawable/app_icon_your_company"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
+            <TextView
+                android:text="去世吧"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
         </com.yalianxun.exhibition.widget.ScaleLayout>
         <LinearLayout
             android:layout_margin="10dp"

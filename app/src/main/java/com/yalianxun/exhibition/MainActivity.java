@@ -27,13 +27,15 @@ public class MainActivity extends FragmentActivity {
     private FragmentTransaction beginTransaction;
     private Fragment oldFragment;
     private View oldItemView;
+    private RecyclerView recyclerView;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final String[] titles = {"首页   ", " 社工服务 ", " 志愿者服务 ", " 公益慈善 ", " 党建与村居务公开 ", " 养老服务 "," 政策与办事指南 "," 居家控制 "};
-        final RecyclerView recyclerView = findViewById(R.id.recycler);
+        final String[] titles = {"首页   ", " 党建与村居务公开 ", " 社工服务 ", " 志愿者服务 ", " 公益慈善 "," 政策与办事指南 ", " 养老服务 "," 医疗卫生 "," 生活服务 "," 企业服务 "," 我的社区 "," 智慧家庭 "};
+        recyclerView = findViewById(R.id.recycler);
         final CustomRecyclerAdapter adapter = new CustomRecyclerAdapter(titles,this);
         final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity.this);
         linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
@@ -55,21 +57,17 @@ public class MainActivity extends FragmentActivity {
                 String key = intent.getStringExtra("key");
 
                 if(key !=null &&key.equals("right") && oldPosition < (titles.length - 1)){
-
-                    if(oldPosition == titles.length/2){
-                        recyclerView.smoothScrollToPosition(titles.length - 1);
-                    }
                     Objects.requireNonNull(linearLayoutManager.findViewByPosition(oldPosition + 1)).requestFocus();
                 }
                 if(key !=null &&key.equals("left") && oldPosition >0){
-                    if(oldPosition == titles.length/2){
-                        recyclerView.smoothScrollToPosition(0);
-                    }
                     Objects.requireNonNull(linearLayoutManager.findViewByPosition(oldPosition - 1)).requestFocus();
                 }
                 if(key !=null &&key.equals("top")&& oldItemView != null){
                     oldItemView.requestFocus();
                 }
+
+                if(key != null && key.contains("click"))
+                    skipView(key.substring(6));
             }
         }, myIntentFilter);
 
@@ -77,27 +75,25 @@ public class MainActivity extends FragmentActivity {
 
     private void initFragments(){
         beginTransaction = getSupportFragmentManager().beginTransaction();
-        Fragment fragment = getSupportFragmentManager().findFragmentByTag("firstFragment");
-        Fragment second = getSupportFragmentManager().findFragmentByTag("second");
-        Fragment third = getSupportFragmentManager().findFragmentByTag("third");
-        if(fragment != null) {
-            beginTransaction.hide(fragment);
+        String[] tags = {"firstFragment","partyBuild","societyService","volunteer","charity","policyGuide"};
+        for (String tag: tags) {
+            Fragment fragment = getSupportFragmentManager().findFragmentByTag(tag);
+            if(fragment != null) {
+                beginTransaction.hide(fragment);
+            }
         }
-        if(second !=null)
-            beginTransaction.hide(second);
-        if(third != null)
-            beginTransaction.hide(third);
-
         beginTransaction.commit();
     }
 
     private void modItemState(View v, int position, boolean hasFocus){
         TextView tv = v.findViewById(R.id.title);
         View line = v.findViewById(R.id.line);
+        boolean increase = position > oldPosition;
+        boolean same = position == oldPosition;
         if(hasFocus){
             if(oldItemView != null && !oldItemView.equals(v)){
-                TextView ot = oldItemView.findViewById(R.id.title);
-                ot.setTextColor(Color.parseColor("#666666"));
+                TextView textView = oldItemView.findViewById(R.id.title);
+                textView.setTextColor(Color.parseColor("#666666"));
             }
             tv.setTextColor(Color.parseColor("#199ED8"));
             line.setVisibility(View.VISIBLE);
@@ -105,17 +101,29 @@ public class MainActivity extends FragmentActivity {
             if(position == 0 && oldPosition != position){
                 showMyFragment("firstFragment");
             }else if(position == 1 && oldPosition != position){
-                showMyFragment("second");
+                showMyFragment("partyBuild");
             }else if(position == 2 && oldPosition != position){
-                showMyFragment("third");
-            }
+                showMyFragment("volunteer");
+            }else if(position == 3 && oldPosition != position)
+                showMyFragment("societyService");
+            else if(position == 4 && oldPosition != position)
+                showMyFragment("charity");
+            else if(position == 5 && oldPosition != position)
+                showMyFragment("policyGuide");
             oldPosition = position;
         }else {
             oldItemView = v;
             line.setVisibility(View.INVISIBLE);
             CommonUtils.setViewZoomOut(v,1.2f);
         }
-
+        int step;
+        if(increase)
+            step = oldPosition + 3;
+        else
+            step = oldPosition - 3;
+        if(oldPosition > 2 && oldPosition < 9 && !same){
+            recyclerView.smoothScrollToPosition(step);
+        }
     }
 
     private void showMyFragment(String string){
@@ -127,5 +135,9 @@ public class MainActivity extends FragmentActivity {
             beginTransaction.setCustomAnimations(R.anim.slide_in,R.anim.slide_out).commitNow();
             oldFragment = fragment;
         }
+    }
+
+    private void skipView(String value){
+        Log.i("xph"," click label is : " + value);
     }
 }

@@ -1,6 +1,7 @@
 package com.yalianxun.exhibition.widget;
 
 //import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.yalianxun.exhibition.NotificationActivity;
 import com.yalianxun.exhibition.R;
 import com.yalianxun.exhibition.utils.CommonUtils;
 
@@ -35,5 +37,13 @@ public class FirstFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         final ImageView imageView = Objects.requireNonNull(getView()).findViewById(R.id.imageView);
         CommonUtils.setImageViewRadiusCorner(getContext(),imageView);
+        View view = Objects.requireNonNull(getView()).findViewById(R.id.society);
+        view.setFocusable(true);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), NotificationActivity.class));
+            }
+        });
     }
 }

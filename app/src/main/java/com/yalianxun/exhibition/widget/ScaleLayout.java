@@ -5,17 +5,20 @@ import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.yalianxun.exhibition.R;
 
 
-public class ScaleLayout extends LinearLayout {
+public class ScaleLayout extends RelativeLayout {
     public boolean isKeep = false;
     private Context mContext;
+    private Drawable original_bg;
     private float SCALE_MIN_VALUE = 1;
     private float SCALE_MAX_VALUE = 1.1f;
 
@@ -63,14 +66,16 @@ public class ScaleLayout extends LinearLayout {
     protected void onFocusChanged(boolean gainFocus, int direction,
                                   Rect previouslyFocusedRect) {
         super.onFocusChanged(gainFocus, direction, previouslyFocusedRect);
+        Log.i("xph"," background " + this.getBackground() + " info : " + this );
         if (isKeep)
             return;
         if (gainFocus) {
 //            scaleOut();
+            original_bg = this.getBackground();
             this.setBackground(mContext.getDrawable(R.drawable.selected_bolder));
         } else {
 //            scaleIn();
-            this.setBackgroundResource(0);
+            this.setBackground(original_bg);
         }
     }
 
@@ -86,7 +91,8 @@ public class ScaleLayout extends LinearLayout {
 
     @Override
     public boolean dispatchKeyEvent(KeyEvent event) {
-//        Log.i("xph","event " + event.getKeyCode() + "   " + this);
+        Log.i("xph"," event " + getContext() + " keycode " + event.getKeyCode());
+//        Log.i("xph","event " + event.getKeyCode() + "  left " + getLeft() + " right : " + getRight() + " width " + getWidth());
         int[] location = {0,0};
         getParent();
         getLocationOnScreen(location);
@@ -109,6 +115,16 @@ public class ScaleLayout extends LinearLayout {
                 sendBroadcast("top");
                 return true;
             }
+        }
+
+        if(event.getKeyCode() == 66){
+            if(event.getAction() == KeyEvent.ACTION_DOWN && this.getChildCount() > 2) {
+                if(this.getChildAt(2) instanceof TextView){
+                    TextView textView = (TextView)this.getChildAt(2);
+                    sendBroadcast("click:" + textView.getText().toString());
+                }
+            }
+            return false;
         }
         return super.dispatchKeyEvent(event);
     }
