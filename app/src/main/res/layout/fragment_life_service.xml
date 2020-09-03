@@ -43,7 +43,7 @@
             android:layout_height="match_parent"/>
         <ImageView
             android:contentDescription="@string/picture"
-            android:src="@drawable/ic_society_station"
+            android:src="@drawable/ic_life_other"
             android:layout_marginTop="15dp"
             android:layout_centerHorizontal="true"
             android:layout_width="60dp"
@@ -76,7 +76,7 @@
             android:layout_height="match_parent"/>
         <ImageView
             android:contentDescription="@string/picture"
-            android:src="@drawable/ic_society_station"
+            android:src="@drawable/ic_life_recycle"
             android:layout_marginTop="@dimen/life_top_margin"
             android:layout_centerHorizontal="true"
             android:layout_width="60dp"
@@ -109,7 +109,7 @@
             android:layout_height="match_parent"/>
         <ImageView
             android:contentDescription="@string/picture"
-            android:src="@drawable/ic_society_station"
+            android:src="@drawable/ic_life_second_hand"
             android:layout_marginTop="@dimen/life_top_margin"
             android:layout_centerHorizontal="true"
             android:layout_width="60dp"
@@ -142,7 +142,7 @@
             android:layout_height="match_parent"/>
         <ImageView
             android:contentDescription="@string/picture"
-            android:src="@drawable/ic_society_station"
+            android:src="@drawable/ic_enterprise_renting"
             android:layout_marginTop="@dimen/life_top_margin"
             android:layout_centerHorizontal="true"
             android:layout_width="60dp"
@@ -176,7 +176,7 @@
         <ImageView
             android:id="@+id/life_house_making_iv"
             android:contentDescription="@string/picture"
-            android:src="@drawable/ic_society_station"
+            android:src="@drawable/ic_life_housewifery"
             android:layout_marginTop="40dp"
             android:layout_centerHorizontal="true"
             android:layout_width="@dimen/life_big_image"
@@ -210,7 +210,7 @@
         <ImageView
             android:id="@+id/life_maintain_iv"
             android:contentDescription="@string/picture"
-            android:src="@drawable/ic_society_station"
+            android:src="@drawable/ic_life_maintain"
             android:layout_marginTop="40dp"
             android:layout_centerHorizontal="true"
             android:layout_width="@dimen/life_big_image"
@@ -244,7 +244,7 @@
         <ImageView
             android:id="@+id/life_pipeline_iv"
             android:contentDescription="@string/picture"
-            android:src="@drawable/ic_society_station"
+            android:src="@drawable/ic_life_pipe_clear"
             android:layout_marginTop="40dp"
             android:layout_centerHorizontal="true"
             android:layout_width="@dimen/life_big_image"
@@ -278,7 +278,7 @@
         <ImageView
             android:id="@+id/life_unlock_iv"
             android:contentDescription="@string/picture"
-            android:src="@drawable/ic_society_station"
+            android:src="@drawable/ic_life_unlock"
             android:layout_marginTop="40dp"
             android:layout_centerHorizontal="true"
             android:layout_width="@dimen/life_big_image"
@@ -310,7 +310,7 @@
             android:layout_height="match_parent"/>
         <ImageView
             android:contentDescription="@string/picture"
-            android:src="@drawable/ic_society_station"
+            android:src="@drawable/ic_life_delivery"
             android:layout_marginTop="@dimen/life_top_margin"
             android:layout_centerHorizontal="true"
             android:layout_width="60dp"
@@ -342,7 +342,7 @@
             android:layout_height="match_parent"/>
         <ImageView
             android:contentDescription="@string/picture"
-            android:src="@drawable/ic_society_station"
+            android:src="@drawable/ic_life_food"
             android:layout_marginTop="@dimen/life_top_margin"
             android:layout_centerHorizontal="true"
             android:layout_width="60dp"
@@ -373,7 +373,7 @@
             android:layout_height="match_parent"/>
         <ImageView
             android:contentDescription="@string/picture"
-            android:src="@drawable/ic_society_station"
+            android:src="@drawable/ic_life_fruit"
             android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true"
             android:layout_width="60dp"

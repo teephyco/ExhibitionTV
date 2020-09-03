@@ -30,6 +30,7 @@
         android:layout_width="22dp"
         android:layout_height="22dp"/>
     <TextView
+        android:id="@+id/back_home"
         android:textColor="#333"
         android:onClick="back"
         android:focusable="true"
@@ -52,6 +53,17 @@
         android:contentDescription="@string/picture"
         android:src="@drawable/ic_wifi"
         android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_width="22dp"
+        android:layout_height="22dp"/>
+    <ImageView
+        android:id="@+id/settings"
+        android:onClick="goSetting"
+        android:focusable="true"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/back_home"
+        android:contentDescription="@string/picture"
+        android:src="@drawable/ic_settings"
         android:layout_marginEnd="16dp"
         android:layout_width="22dp"
         android:layout_height="22dp"/>

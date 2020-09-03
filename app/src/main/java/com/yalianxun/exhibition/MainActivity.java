@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -17,6 +18,8 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.baidu.mapapi.CoordType;
+import com.baidu.mapapi.SDKInitializer;
 import com.yalianxun.exhibition.adapter.CustomRecyclerAdapter;
 import com.yalianxun.exhibition.utils.CommonUtils;
 
@@ -34,6 +37,7 @@ public class MainActivity extends FragmentActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         final String[] titles = {"首页   ", " 党建与村居务公开 ", " 社工服务 ", " 志愿者服务 ", " 公益慈善 "," 政策与办事指南 ", " 养老服务 "," 医疗卫生 "," 生活服务 "," 企业服务 "," 我的社区 "," 智慧家庭 "};
         recyclerView = findViewById(R.id.recycler);
         final CustomRecyclerAdapter adapter = new CustomRecyclerAdapter(titles,this);
@@ -98,24 +102,6 @@ public class MainActivity extends FragmentActivity {
             tv.setTextColor(Color.parseColor("#199ED8"));
             line.setVisibility(View.VISIBLE);
             CommonUtils.setViewZoomIn(v,1.2f);
-//            if(position == 0 && oldPosition != position){
-//                showMyFragment("firstFragment");
-//            }else if(position == 1 && oldPosition != position){
-//                showMyFragment("partyBuild");
-//            }else if(position == 2 && oldPosition != position){
-//                showMyFragment("societyService");
-//            }else if(position == 3 && oldPosition != position)
-//                showMyFragment("volunteer");
-//            else if(position == 4 && oldPosition != position)
-//                showMyFragment("charity");
-//            else if(position == 5 && oldPosition != position)
-//                showMyFragment("policyGuide");
-//            else if(position == 6 && oldPosition != position)
-//                showMyFragment("pension");
-//            else if(position == 7 && oldPosition != position)
-//                showMyFragment("hospital");
-//            else if(position == 8 && oldPosition != position)
-//                showMyFragment("life");
             if(oldPosition != position)
                 showMyFragment(tags[position]);
             oldPosition = position;
@@ -146,6 +132,10 @@ public class MainActivity extends FragmentActivity {
     }
 
     private void skipView(String value){
-        Log.i("xph"," click label is : " + value);
+        if(value != null){
+            Intent intent = new Intent(this,CommonSecondaryActivity.class);
+            intent.putExtra("title",value);
+            startActivity(intent);
+        }
     }
 }

@@ -49,7 +49,7 @@
             android:layout_height="match_parent"/>
         <ImageView
             android:contentDescription="@string/picture"
-            android:src="@drawable/ic_society_station"
+            android:src="@drawable/ic_enterprise_finance"
             android:layout_marginTop="15dp"
             android:layout_centerHorizontal="true"
             android:layout_width="60dp"
@@ -82,7 +82,7 @@
             android:layout_height="match_parent"/>
         <ImageView
             android:contentDescription="@string/picture"
-            android:src="@drawable/ic_society_station"
+            android:src="@drawable/ic_enterprise_ad"
             android:layout_marginTop="@dimen/life_top_margin"
             android:layout_centerHorizontal="true"
             android:layout_width="60dp"
@@ -115,7 +115,7 @@
             android:layout_height="match_parent"/>
         <ImageView
             android:contentDescription="@string/picture"
-            android:src="@drawable/ic_society_station"
+            android:src="@drawable/ic_enterprise_knowledge"
             android:layout_marginTop="@dimen/life_top_margin"
             android:layout_centerHorizontal="true"
             android:layout_width="60dp"
@@ -148,7 +148,7 @@
             android:layout_height="match_parent"/>
         <ImageView
             android:contentDescription="@string/picture"
-            android:src="@drawable/ic_society_station"
+            android:src="@drawable/ic_enterprise_supermarket"
             android:layout_marginTop="@dimen/life_top_margin"
             android:layout_centerHorizontal="true"
             android:layout_width="60dp"
@@ -180,7 +180,7 @@
             android:layout_height="match_parent"/>
         <ImageView
             android:contentDescription="@string/picture"
-            android:src="@drawable/ic_society_apply"
+            android:src="@drawable/ic_enterprise_recruit"
             android:layout_centerVertical="true"
             android:layout_marginStart="60dp"
             android:layout_width="120dp"
@@ -213,7 +213,7 @@
         <ImageView
             android:id="@+id/life_pipeline_iv"
             android:contentDescription="@string/picture"
-            android:src="@drawable/ic_society_station"
+            android:src="@drawable/ic_enterprise_net"
             android:layout_marginTop="40dp"
             android:layout_centerHorizontal="true"
             android:layout_width="@dimen/life_big_image"
@@ -257,7 +257,7 @@
         <ImageView
             android:id="@+id/life_unlock_iv"
             android:contentDescription="@string/picture"
-            android:src="@drawable/ic_society_station"
+            android:src="@drawable/ic_enterprise_school"
             android:layout_marginTop="40dp"
             android:layout_centerHorizontal="true"
             android:layout_width="@dimen/life_big_image"
@@ -299,7 +299,7 @@
             android:layout_height="match_parent"/>
         <ImageView
             android:contentDescription="@string/picture"
-            android:src="@drawable/ic_society_station"
+            android:src="@drawable/ic_enterprise_family"
             android:layout_marginTop="@dimen/life_top_margin"
             android:layout_centerHorizontal="true"
             android:layout_width="60dp"
@@ -333,7 +333,7 @@
         <ImageView
             android:id="@+id/life_fruit_iv"
             android:contentDescription="@string/picture"
-            android:src="@drawable/ic_society_station"
+            android:src="@drawable/ic_enterprise_renting"
             android:layout_marginTop="40dp"
             android:layout_centerHorizontal="true"
             android:layout_width="@dimen/life_big_image"

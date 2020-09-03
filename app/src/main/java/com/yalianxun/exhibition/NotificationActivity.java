@@ -1,6 +1,8 @@
 package com.yalianxun.exhibition;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
@@ -82,5 +84,8 @@ public class NotificationActivity extends FragmentActivity {
     }
     public void back(View view) {
         finish();
+    }
+    public void goSetting(View view) {
+        startActivity(new Intent(Settings.ACTION_SETTINGS));
     }
 }
