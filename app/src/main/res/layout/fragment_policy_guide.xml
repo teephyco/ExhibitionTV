@@ -26,8 +26,8 @@
             android:src="@drawable/ic_policy_map"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="60dp"
-            android:layout_width="160dp"
-            android:layout_height="160dp"/>
+            android:layout_width="@dimen/big_image"
+            android:layout_height="@dimen/big_image"/>
         <TextView
             android:text="政务服务地图"
             android:layout_below="@id/policy_map_iv"
@@ -61,8 +61,8 @@
             android:src="@drawable/ic_policy_compass"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="60dp"
-            android:layout_width="160dp"
-            android:layout_height="160dp"/>
+            android:layout_width="@dimen/big_image"
+            android:layout_height="@dimen/big_image"/>
         <TextView
             android:text="办事指南"
             android:layout_below="@id/policy_guide_iv"
@@ -96,8 +96,8 @@
             android:src="@drawable/ic_policy_publicity"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="60dp"
-            android:layout_width="160dp"
-            android:layout_height="160dp"/>
+            android:layout_width="@dimen/big_image"
+            android:layout_height="@dimen/big_image"/>
         <TextView
             android:text="政策宣传"
             android:layout_below="@id/policy_publicity_iv"
@@ -129,8 +129,8 @@
             android:src="@drawable/ic_policy_online_guide"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="60dp"
-            android:layout_width="160dp"
-            android:layout_height="160dp"/>
+            android:layout_width="@dimen/big_image"
+            android:layout_height="@dimen/big_image"/>
         <TextView
             android:text="在线办理指引"
             android:layout_below="@id/policy_online_iv"

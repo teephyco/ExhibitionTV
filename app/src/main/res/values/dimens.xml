@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="big_image">140dp</dimen>
+    <dimen name="life_big_image">100dp</dimen>
+    <dimen name="life_top_margin">15dp</dimen>
+    <dimen name="life_text_top_margin">90dp</dimen>
+</resources>

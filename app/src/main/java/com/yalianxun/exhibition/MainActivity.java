@@ -28,7 +28,7 @@ public class MainActivity extends FragmentActivity {
     private Fragment oldFragment;
     private View oldItemView;
     private RecyclerView recyclerView;
-
+    private final String[] tags = {"firstFragment","partyBuild","societyService","volunteer","charity","policyGuide","pension","hospital","life","enterprise","myCommunity","wisdom"};
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -75,7 +75,7 @@ public class MainActivity extends FragmentActivity {
 
     private void initFragments(){
         beginTransaction = getSupportFragmentManager().beginTransaction();
-        String[] tags = {"firstFragment","partyBuild","societyService","volunteer","charity","policyGuide"};
+
         for (String tag: tags) {
             Fragment fragment = getSupportFragmentManager().findFragmentByTag(tag);
             if(fragment != null) {
@@ -98,18 +98,26 @@ public class MainActivity extends FragmentActivity {
             tv.setTextColor(Color.parseColor("#199ED8"));
             line.setVisibility(View.VISIBLE);
             CommonUtils.setViewZoomIn(v,1.2f);
-            if(position == 0 && oldPosition != position){
-                showMyFragment("firstFragment");
-            }else if(position == 1 && oldPosition != position){
-                showMyFragment("partyBuild");
-            }else if(position == 2 && oldPosition != position){
-                showMyFragment("volunteer");
-            }else if(position == 3 && oldPosition != position)
-                showMyFragment("societyService");
-            else if(position == 4 && oldPosition != position)
-                showMyFragment("charity");
-            else if(position == 5 && oldPosition != position)
-                showMyFragment("policyGuide");
+//            if(position == 0 && oldPosition != position){
+//                showMyFragment("firstFragment");
+//            }else if(position == 1 && oldPosition != position){
+//                showMyFragment("partyBuild");
+//            }else if(position == 2 && oldPosition != position){
+//                showMyFragment("societyService");
+//            }else if(position == 3 && oldPosition != position)
+//                showMyFragment("volunteer");
+//            else if(position == 4 && oldPosition != position)
+//                showMyFragment("charity");
+//            else if(position == 5 && oldPosition != position)
+//                showMyFragment("policyGuide");
+//            else if(position == 6 && oldPosition != position)
+//                showMyFragment("pension");
+//            else if(position == 7 && oldPosition != position)
+//                showMyFragment("hospital");
+//            else if(position == 8 && oldPosition != position)
+//                showMyFragment("life");
+            if(oldPosition != position)
+                showMyFragment(tags[position]);
             oldPosition = position;
         }else {
             oldItemView = v;

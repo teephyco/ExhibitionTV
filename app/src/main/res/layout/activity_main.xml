@@ -75,6 +75,36 @@
                 android:name="com.yalianxun.exhibition.widget.VolunteerFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
+            <fragment
+                android:tag="pension"
+                android:name="com.yalianxun.exhibition.widget.PensionServiceFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <fragment
+                android:tag="hospital"
+                android:name="com.yalianxun.exhibition.widget.MedicalTreatmentFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <fragment
+                android:tag="life"
+                android:name="com.yalianxun.exhibition.widget.LifeServiceFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <fragment
+                android:tag="enterprise"
+                android:name="com.yalianxun.exhibition.widget.EnterpriseFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <fragment
+                android:tag="myCommunity"
+                android:name="com.yalianxun.exhibition.widget.MyCommunityFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <fragment
+                android:tag="wisdom"
+                android:name="com.yalianxun.exhibition.widget.WisdomFamilyFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
         </FrameLayout>
 
     </LinearLayout>

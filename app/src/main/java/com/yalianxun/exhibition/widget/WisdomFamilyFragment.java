@@ -15,18 +15,17 @@ import com.yalianxun.exhibition.utils.CommonUtils;
 
 import java.util.Objects;
 
-
-public class SecondFragment extends Fragment {
+public class WisdomFamilyFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.custom_view_style_second, container, false);
+        return inflater.inflate(R.layout.fragment_wisdom_family, container, false);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         final ImageView imageView = Objects.requireNonNull(getView()).findViewById(R.id.imageView);
-        CommonUtils.setImageViewRadiusCorner(getContext(),imageView);
+        CommonUtils.setImageViewRadiusCorner(getContext(),imageView,R.drawable.build);
     }
 }

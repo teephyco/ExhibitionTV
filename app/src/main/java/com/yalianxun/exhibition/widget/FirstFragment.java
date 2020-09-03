@@ -36,7 +36,7 @@ public class FirstFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         final ImageView imageView = Objects.requireNonNull(getView()).findViewById(R.id.imageView);
-        CommonUtils.setImageViewRadiusCorner(getContext(),imageView);
+        CommonUtils.setImageViewRadiusCorner(getContext(),imageView,R.drawable.app_icon_your_company);
         View view = Objects.requireNonNull(getView()).findViewById(R.id.society);
         view.setFocusable(true);
         view.setOnClickListener(new View.OnClickListener() {

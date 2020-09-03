@@ -54,10 +54,10 @@ public class CommonUtils {
         v.startAnimation(animationSet);
     }
 
-    public static  void setImageViewRadiusCorner(final Context context, final ImageView imageView){
+    public static  void setImageViewRadiusCorner(final Context context, final ImageView imageView ,int resId){
         Glide.with(context)
                 .asBitmap()
-                .load(R.drawable.app_icon_your_company)
+                .load(resId)
                 .into(new BitmapImageViewTarget(imageView){
                     @Override
                     protected void setResource(Bitmap resource) {

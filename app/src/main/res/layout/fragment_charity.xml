@@ -26,8 +26,8 @@
             android:src="@drawable/ic_society_charity"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="60dp"
-            android:layout_width="160dp"
-            android:layout_height="160dp"/>
+            android:layout_width="@dimen/big_image"
+            android:layout_height="@dimen/big_image"/>
         <TextView
             android:id="@+id/charity_good_donation_title"
             android:text="善 捐"
@@ -71,8 +71,8 @@
             android:src="@drawable/ic_charity_help"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="60dp"
-            android:layout_width="160dp"
-            android:layout_height="160dp"/>
+            android:layout_width="@dimen/big_image"
+            android:layout_height="@dimen/big_image"/>
         <TextView
             android:id="@+id/charity_good_help_title"
             android:text="善 助"
@@ -116,8 +116,8 @@
             android:src="@drawable/ic_charity_works"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="60dp"
-            android:layout_width="160dp"
-            android:layout_height="160dp"/>
+            android:layout_width="@dimen/big_image"
+            android:layout_height="@dimen/big_image"/>
         <TextView
             android:id="@+id/charity_good_works_title"
             android:text="善 行"
@@ -159,8 +159,8 @@
             android:src="@drawable/ic_charity_goods"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="60dp"
-            android:layout_width="160dp"
-            android:layout_height="160dp"/>
+            android:layout_width="@dimen/big_image"
+            android:layout_height="@dimen/big_image"/>
         <TextView
             android:id="@+id/charity_good_materials_title"
             android:text="善 品"
